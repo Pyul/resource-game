@@ -1,0 +1,65 @@
+body {
+	font-family: Verdana, "Times New Roman", Times, serif;
+	font-size: 16px;
+    background-color: #dddddd;
+	font-weight: normal;
+	line-height: normal;
+	letter-spacing: normal;
+}
+
+table {
+    border-collapse: collapse;
+    position: absolute;
+    white-space: nowrap;
+}
+
+.header {
+    text-align: center;
+}
+
+#notificationHeader {
+    text-align: left;
+    padding: 0px 0px 10px 0px;
+    border-bottom: 1px solid black;
+}
+
+#resourceHeader {
+    border-bottom: 1px solid black;
+    padding: 0px 0px 10px 0px;
+}
+
+#notificationSection {
+	position: fixed;
+	float: left;
+	width: 15%;
+	height: 100%;
+	overflow: hidden;
+    border-right: 1px dotted black;
+    padding: 1% 1% 1% 1%;
+}
+
+#mainGame {
+    position: relative;
+	float: right;
+	width: 80%;
+    height: 100%;
+}
+
+#commandSection {
+    position: relative;
+    float: left;
+    width: 65%;
+    height: auto;
+    overflow: hidden;
+    padding: 1% 0% 0% 0%;
+}
+
+#resourceSection {
+    position: relative;
+	float: right;
+    overflow: hidden;
+    width: 30%;
+    height: auto;
+    border: 1px dotted black;
+    padding: 1% 1% 1% 1%;
+}
