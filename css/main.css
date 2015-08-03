@@ -9,22 +9,33 @@ body {
 
 table {
     border-collapse: collapse;
-    position: absolute;
+    position: relative;
     white-space: nowrap;
+    width: 100%;
+    text-align: center;
+}
+
+td {
+    position: relative;
+    padding: 5px 10px 5px 0px;
 }
 
 .header {
     text-align: center;
 }
 
-#notificationHeader {
-    text-align: left;
-    padding: 0px 0px 10px 0px;
+#tableHeader {
     border-bottom: 1px solid black;
 }
 
+#notificationHeader {
+    text-align: left;
+    padding: 0px 0px 10px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
 #resourceHeader {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     padding: 0px 0px 10px 0px;
 }
 
@@ -34,8 +45,14 @@ table {
 	width: 15%;
 	height: 100%;
 	overflow: hidden;
-    border-right: 1px dotted black;
+    border-right: 1px solid rgba(0, 0, 0, 1);
     padding: 1% 1% 1% 1%;
+}
+
+.notificationText {
+    margin: 0px;
+    padding: 5% 0px 5% 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
 
 #mainGame {
@@ -60,6 +77,14 @@ table {
     overflow: hidden;
     width: 30%;
     height: auto;
-    border: 1px dotted black;
     padding: 1% 1% 1% 1%;
+}
+
+#resourceBody {
+    position: relative;
+}
+
+.lastInResourceTable {
+    float: right;
+    text-align: right;
 }

@@ -1,23 +1,25 @@
+// Game saves every 10 seconds
 window.setInterval(function(){
     if(typeof(Storage) !== "undefined") {
         localStorage.savedGame = 1;
-        localStorage.resource_game_wood = wood;
-        localStorage.resource_game_stone = stone;
-        localStorage.resouce_game_water = water;
-        localStorage.resouce_game_food = food;
-        localStorage.resouce_game_villagers = villagers;
-        localStorage.resource_game_notifications = notifications;
-        localStorage.resource_game_workerDist = workerDist;
+        
+        localStorage.RESOURCEGAME_resources = resources;
+        localStorage.RESOURCEGAME_workAllocation = workAllocation;
+        localStorage.RESOURCEGAME_notifications = notifications;
     }
 }, 10000)
 
+// Resource amounts get updated every 5 seconds
 window.setInterval(function(){
-   wood += workerDist[0];
-   stone += workerDist[1];
-   water += workerDist[2];
-   food += workerDist[3];
+   resources.wood += workAllocation.wood;
+   resources.stone += workAllocation.stone;
+   resources.water += workAllocation.water;
+   resources.food += workAllocation.food;
 
-   newResourceListing 
+   updateResourceVisual();
+}, 5000)
 
-   document.getElementById('resourceListing').innerHTML = newResourceListing;
+// Events get updated every 1 second
+window.setInterval(function(){
+   updateEventVisual();
 }, 1000)
