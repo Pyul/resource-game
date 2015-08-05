@@ -1,25 +1,27 @@
-// Game saves every 10 seconds
-window.setInterval(function(){
-    if(typeof(Storage) !== "undefined") {
-        localStorage.savedGame = 1;
+function enableTimers() {
+    // Game saves every 1 second
+    window.setInterval(function(){
+        if(typeof(Storage) !== "undefined") {
+            localStorage.savedGame = 1;
         
-        localStorage.RESOURCEGAME_resources = resources;
-        localStorage.RESOURCEGAME_workAllocation = workAllocation;
-        localStorage.RESOURCEGAME_notifications = notifications;
-    }
-}, 10000)
+            localStorage.RESOURCEGAME_resources = JSON.stringify(resources);
+            localStorage.RESOURCEGAME_workAllocation = JSON.stringify(workAllocation);
+            localStorage.RESOURCEGAME_notifications = JSON.stringify(notifications);
+        }
+    }, 1000)
 
-// Resource amounts get updated every 5 seconds
-window.setInterval(function(){
-   resources.wood += workAllocation.wood;
-   resources.stone += workAllocation.stone;
-   resources.water += workAllocation.water;
-   resources.food += workAllocation.food;
+    // Resource amounts get updated every 5 seconds
+    window.setInterval(function(){
+       resources.wood += workAllocation.wood;
+       resources.stone += workAllocation.stone;
+       resources.water += workAllocation.water;
+       resources.food += workAllocation.food;
 
-   updateResourceVisual();
-}, 5000)
+       updateResourceVisual();
+    }, 5000)
 
-// Events get updated every 1 second
-window.setInterval(function(){
-   updateEventVisual();
-}, 1000)
+    window.setInterval(function(){
+        notifications.push("next");
+        updateEventVisual();
+    }, 5000)
+}
