@@ -19,9 +19,4 @@ function enableTimers() {
 
        updateResourceVisual();
     }, 5000)
-
-    window.setInterval(function(){
-        notifications.push("next");
-        updateEventVisual();
-    }, 5000)
 }

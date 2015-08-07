@@ -1,6 +1,6 @@
 function createResourceVisual() {
-   var numResourceListing = "<tr><td class = 'tableHeader'><p>Item Name</p></td>";
-   numResourceListing += "<td class = 'lastColumn tableHeader'><p>Rate Every 5 Seconds</p></td></tr>";
+   var numResourceListing = "<tr><td class = 'tableHeader'><p>Resource Name</p></td>";
+   numResourceListing += "<td class = 'lastColumn tableHeader'><p>+/- in 5 sec.</p></td></tr>";
 
    for (var key in resources) {
       if (resources.hasOwnProperty(key)) {
